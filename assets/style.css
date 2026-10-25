@@ -2,11 +2,6 @@ html {
   overflow-y: scroll;
 }
 
-/* --- Kode CSS lama kamu yang sudah ada di bawahnya --- */
-body {
-  /* ... */
-}
-
 :root {
   --teal: #007F88;
   --navy: #002976;
@@ -219,22 +214,22 @@ body {
   }
 }
 
-..alumnus, .hospital {
-    font-size: 12px;
-    color: #e2e8f0;
-    margin: 2px 0;
+.alumnus, .hospital {
+  font-size: 12px;
+  color: #4a5568; /* Diubah ke abu-abu gelap agar kontras */
+  margin: 2px 0;
 }
 
 .doctor-quote {
-    font-style: italic;
-    font-size: 11px;
-    color: #f1f5f9;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 8px;
-    border-radius: 6px;
-    margin: 10px 0;
-    border-left: 3px solid #34d399;
-    text-align: left;
+  font-style: italic;
+  font-size: 11px;
+  color: #2d3748; /* Diubah ke teks gelap */
+  background: rgba(0, 0, 0, 0.03); /* Diubah ke transparan gelap tipis agar kotaknya terlihat */
+  padding: 8px;
+  border-radius: 6px;
+  margin: 10px 0;
+  border-left: 3px solid #34d399;
+  text-align: left;
 }
 
 .partner-action {
