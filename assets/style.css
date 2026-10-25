@@ -216,19 +216,19 @@ body {
 
 .alumnus, .hospital {
   font-size: 12px;
-  color: #4a5568; /* Diubah ke abu-abu gelap agar kontras */
+  color: #475569; /* Ubah jadi abu-abu gelap agar kontras */
   margin: 2px 0;
 }
 
 .doctor-quote {
   font-style: italic;
   font-size: 11px;
-  color: #2d3748; /* Diubah ke teks gelap */
-  background: rgba(0, 0, 0, 0.03); /* Diubah ke transparan gelap tipis agar kotaknya terlihat */
+  color: #334155; /* Ubah jadi warna gelap */
+  background: rgba(0, 0, 0, 0.04); /* Beri background tipis agar kotaknya kelihatan */
   padding: 8px;
   border-radius: 6px;
   margin: 10px 0;
-  border-left: 3px solid #34d399;
+  border-left: 3px solid #0d9488; /* Warna garis aksen */
   text-align: left;
 }
 
