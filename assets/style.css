@@ -218,3 +218,45 @@ body {
     transform: translateY(0);
   }
 }
+
+.alumnus, .hospital {
+    font-size: 12px;
+    color: #e2e8f0;
+    margin: 2px 0;
+}
+
+.doctor-quote {
+    font-style: italic;
+    font-size: 11px;
+    color: #f1f5f9;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px;
+    border-radius: 6px;
+    margin: 10px 0;
+    border-left: 3px solid #34d399;
+    text-align: left;
+}
+
+.partner-action {
+    margin-top: 12px;
+    width: 100%;
+}
+
+.chat-btn {
+    display: block;
+    width: 100%;
+    background-color: #ffffff;
+    color: #0f766e;
+    padding: 8px 0;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+    transition: background 0.2s, color 0.2s;
+}
+
+.chat-btn:hover {
+    background-color: #34d399;
+    color: #ffffff;
+}

@@ -4,34 +4,84 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TalkToMe | Kontak</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="./assets/style.css">
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="assets/script.js" defer></script>
+  <script src="./assets/script.js" defer></script>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="TalkToMe - Beranda"><svg class="brand-mark" viewBox="0 0 52 52" aria-hidden="true"><path d="M11 6h13c9 0 15 7 15 16v8c0 9-6 16-15 16h-4v-9h-9z" fill="currentColor"/><path d="M34 17c4 3 6 7 6 11s-2 8-6 11M39 21c3 2 4 5 4 7s-1 5-4 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg><span>TalkToMe</span></a>
+    <a class="brand" href="index.html" aria-label="TalkToMe - Beranda">
+      <svg class="brand-mark" viewBox="0 0 52 52" aria-hidden="true">
+        <path d="M11 6h13c9 0 15 7 15 16v8c0 9-6 16-15 16h-4v-9h-9z" fill="currentColor"/>
+        <path d="M34 17c4 3 6 7 6 11s-2 8-6 11M39 21c3 2 4 5 4 7s-1 5-4 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <span>TalkToMe</span>
+    </a>
     <button class="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false">☰</button>
-    <nav class="main-nav" aria-label="Navigasi utama"><a href="index.html">Home</a><a href="tentang.html">Tentang</a><a href="partner.html">Partner Kami</a><a class="active" href="kontak.html">Kontak</a></nav>
+    <nav class="main-nav" aria-label="Navigasi utama">
+      <a href="index.html">Home</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="partner.html">Partner Kami</a>
+      <a class="active" href="kontak.html">Kontak</a>
+    </nav>
   </header>
+
   <main class="page-shell aqua-page contact-page">
-    <div class="section-heading contact-heading"><h1>Mengapa Memilih Kami?</h1><p>Di TalkToMe, kami percaya semua suara memiliki arti. Apa pun yang sedang kamu hadapi,<br class="desktop-break"> kamu tidak harus menghadapinya sendirian. Kami hadir untuk mendengarkan dan mendukungmu.</p></div>
+    <div class="section-heading contact-heading">
+      <h1>Mengapa Memilih Kami?</h1>
+      <p>Di TalkToMe, kami percaya semua suara memiliki arti. Apa pun yang sedang kamu hadapi,<br class="desktop-break"> kamu tidak harus menghadapinya sendirian. Kami hadir untuk mendengarkan dan mendukungmu.</p>
+    </div>
+
     <form class="contact-form" id="contactForm">
       <h2>Hubungi TalkToMe</h2>
+
+      <div id="selectedPartner" class="selected-partner" hidden
+           style="margin: 0 0 16px; padding: 12px 14px; border-radius: 10px; background: #e5f8f7; color: #075b61;">
+        Partner yang dipilih: <strong id="selectedPartnerName"></strong>
+      </div>
+
       <label for="name">Nama</label>
       <input id="name" name="name" type="text" placeholder="Isi nama Anda" autocomplete="name" required minlength="2">
+
       <label for="email">Email</label>
       <input id="email" name="email" type="email" placeholder="Isi email Anda" autocomplete="email" required>
+
       <label for="message">Pesan</label>
       <textarea id="message" name="message" placeholder="Pesan Anda" rows="4" required minlength="5"></textarea>
+
       <button class="button button-light" type="submit">KIRIM</button>
       <p class="form-note" id="formNote" aria-live="polite">Lengkapi semua kolom sebelum mengirim pesan.</p>
     </form>
   </main>
-  <footer class="site-footer"><span>© 2026 TalkToMe</span><span>Tempat bercerita, ruang untuk bertumbuh.</span></footer>
-  <!-- Tombol Navigasi Kanan Bawah -->
-<div class="nav-buttons">
-  <a href="partner.html" class="btn-nav">&larr; Previous</a>
-</div>
+
+  <footer class="site-footer">
+    <span>© 2026 TalkToMe</span>
+    <span>Tempat bercerita, ruang untuk bertumbuh.</span>
+  </footer>
+
+  <div class="nav-buttons">
+    <a href="partner.html" class="btn-nav">&larr; Previous</a>
+  </div>
+
+  <script>
+    // Membaca nama partner dari URL, misalnya kontak.html?partner=Dr.%20Gia
+    document.addEventListener("DOMContentLoaded", function () {
+      const params = new URLSearchParams(window.location.search);
+      const partner = params.get("partner");
+      const selectedBox = document.getElementById("selectedPartner");
+      const selectedName = document.getElementById("selectedPartnerName");
+      const messageField = document.getElementById("message");
+
+      if (partner && selectedBox && selectedName && messageField) {
+        selectedName.textContent = partner;
+        selectedBox.hidden = false;
+
+        // Masukkan nama partner ke pesan agar ikut terkirim melalui form yang sudah ada.
+        if (!messageField.value.trim()) {
+          messageField.value = "Saya ingin menghubungi " + partner + ".\\n\\n";
+        }
+      }
+    });
+  </script>
 </body>
 </html>

@@ -4,8 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TalkToMe | Partner Kami</title>
-  <link rel="stylesheet" href="assets/style.css">
-  <script src="assets/script.js" defer></script>
+  <link rel="stylesheet" href="./assets/style.css">
+  <script src="./assets/script.js" defer></script>
+
+  <style>
+    .partners-page .partner-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      padding: 24px;
+    }
+    .partners-page .partner-card {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      height: 100%;
+      padding: 22px;
+      border-radius: 18px;
+      background: #ffffff;
+      color: #123047;
+      box-shadow: 0 6px 20px rgba(0, 70, 80, .10);
+      border: 1px solid rgba(0, 120, 130, .12);
+    }
+    .partners-page .partner-info { display: block !important; }
+    .partners-page .partner-info h2 { margin: 0 0 8px; }
+    .partners-page .partner-info p { display: block !important; margin: 6px 0; }
+    .partners-page .doctor-quote {
+      display: block !important;
+      margin: 12px 0 0;
+      padding-left: 12px;
+      border-left: 3px solid #07939a;
+    }
+    .partners-page .partner-action { margin-top: auto; }
+    .partners-page .chat-btn {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: #007f86;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .partners-page .chat-btn:hover { background: #00666d; }
+    @media (max-width: 600px) {
+      .partners-page .partner-grid { grid-template-columns: 1fr; padding: 16px; }
+    }
+  </style>
+
 </head>
 <body>
   <header class="site-header">
@@ -14,28 +59,268 @@
     <nav class="main-nav" aria-label="Navigasi utama"><a href="index.html">Home</a><a href="tentang.html">Tentang</a><a class="active" href="partner.html">Partner Kami</a><a href="kontak.html">Kontak</a></nav>
   </header>
   <main class="page-shell aqua-page partners-page">
-    <div class="section-heading"><p class="eyebrow">Kenali para pendamping</p><h1>Partner Kami</h1><p>Temukan partner yang siap mendengarkan dan mendampingi perjalananmu.</p></div>
+    <div class="section-heading">
+        <p class="eyebrow">Kenali para pendamping</p>
+        <h1>Partner Kami</h1>
+        <p>Temukan partner yang siap mendengarkan dan mendampingi perjalananmu.</p>
+    </div>
+    
     <section class="partner-grid" aria-label="Daftar partner">
-      <article class="partner-card"><div class="avatar avatar-1">DG</div><h2>Dr. Gia</h2><p>Partner TalkToMe</p></article>
-      <article class="partner-card"><div class="avatar avatar-2">DT</div><h2>Dr. Tirta</h2><p>Partner TalkToMe</p></article>
-      <article class="partner-card"><div class="avatar avatar-3">DJ</div><h2>Dr. Joko</h2><p>Partner TalkToMe</p></article>
-      <article class="partner-card"><div class="avatar avatar-4">DA</div><h2>Dr. Amel</h2><p>Partner TalkToMe</p></article>
-      <article class="partner-card"><div class="avatar avatar-5">DP</div><h2>Dr. Putri</h2><p>Partner TalkToMe</p></article>
-      <article class="partner-card"><div class="avatar avatar-6">DA</div><h2>Dr. Anggi</h2><p>Partner TalkToMe</p></article>
-      <article class="partner-card"><div class="avatar avatar-7">DV</div><h2>Dr. Vina</h2><p>Partner TalkToMe</p></article>
-      <article class="partner-card"><div class="avatar avatar-8">DC</div><h2>Dr. Chel</h2><p>Partner TalkToMe</p></article>
-      <article class="partner-card"><div class="avatar avatar-9">DC</div><h2>Dr. Cila</h2><p>Partner TalkToMe</p></article>
-      <article class="partner-card"><div class="avatar avatar-10">DJ</div><h2>Dr. Jarot</h2><p>Partner TalkToMe</p></article>
-      <article class="partner-card"><div class="avatar avatar-11">DA</div><h2>Dr. Asel</h2><p>Partner TalkToMe</p></article>
-      <article class="partner-card"><div class="avatar avatar-12">DA</div><h2>Dr. Acut</h2><p>Partner TalkToMe</p></article>
-      <article class="partner-card"><div class="avatar avatar-13">DY</div><h2>Dr. Yaya</h2><p>Partner TalkToMe</p></article>
-      <article class="partner-card"><div class="avatar avatar-14">DL</div><h2>Dr. Lolo</h2><p>Partner TalkToMe</p></article>
-      <article class="partner-card"><div class="avatar avatar-15">DE</div><h2>Dr. Ehe</h2><p>Partner TalkToMe</p></article>
-      <article class="partner-card"><div class="avatar avatar-16">DE</div><h2>Dr. Emg</h2><p>Partner TalkToMe</p></article>
-      <article class="partner-card"><div class="avatar avatar-17">DL</div><h2>Dr. Loo</h2><p>Partner TalkToMe</p></article>
-      <article class="partner-card"><div class="avatar avatar-18">DJ</div><h2>Dr. Jack</h2><p>Partner TalkToMe</p></article>
+        
+        <!-- 1. Dr. Gia -->
+        <article class="partner-card">
+            <div class="avatar avatar-1">DG</div>
+            <div class="partner-info">
+                <h2>Dr. Gia</h2>
+                <p class="alumnus">Alumnus: Universitas Indonesia (UI)</p>
+                <p class="hospital">Praktik: RS Cipto Mangunkusumo</p>
+                <blockquote class="doctor-quote">"Setiap perasaan berharga dan layak untuk didengar."</blockquote>
+            </div>
+            <div class="partner-action">
+                <a href="kontak.html?partner=Dr.%20Gia" class="chat-btn">Chat Sekarang</a>
+            </div>
+        </article>
+
+        <!-- 2. Dr. Tirta -->
+        <article class="partner-card">
+            <div class="avatar avatar-2">DT</div>
+            <div class="partner-info">
+                <h2>Dr. Tirta</h2>
+                <p class="alumnus">Alumnus: Universitas Gadjah Mada (UGM)</p>
+                <p class="hospital">Praktik: RS Sardjito Yogyakarta</p>
+                <blockquote class="doctor-quote">"Langkah kecil hari ini adalah awal pemulihan."</blockquote>
+            </div>
+            <div class="partner-action">
+                <a href="kontak.html?partner=Dr.%20Tirta" class="chat-btn">Chat Sekarang</a>
+            </div>
+        </article>
+
+        <!-- 3. Dr. Joko -->
+        <article class="partner-card">
+            <div class="avatar avatar-3">DJ</div>
+            <div class="partner-info">
+                <h2>Dr. Joko</h2>
+                <p class="alumnus">Alumnus: Universitas Airlangga (UNAIR)</p>
+                <p class="hospital">Praktik: RS Dr. Soetomo Surabaya</p>
+                <blockquote class="doctor-quote">"Kamu tidak harus memikul semuanya seorang diri."</blockquote>
+            </div>
+            <div class="partner-action">
+                <a href="kontak.html?partner=Dr.%20Joko" class="chat-btn">Chat Sekarang</a>
+            </div>
+        </article>
+
+        <!-- 4. Dr. Amel -->
+        <article class="partner-card">
+            <div class="avatar avatar-4">DA</div>
+            <div class="partner-info">
+                <h2>Dr. Amel</h2>
+                <p class="alumnus">Alumnus: Universitas Padjadjaran (UNPAD)</p>
+                <p class="hospital">Praktik: RS Hasan Sadikin Bandung</p>
+                <blockquote class="doctor-quote">"Beristirahatlah jika lelah, prosesmu sudah sangat hebat."</blockquote>
+            </div>
+            <div class="partner-action">
+                <a href="kontak.html?partner=Dr.%20Amel" class="chat-btn">Chat Sekarang</a>
+            </div>
+        </article>
+
+        <!-- 5. Dr. Putri -->
+        <article class="partner-card">
+            <div class="avatar avatar-5">DP</div>
+            <div class="partner-info">
+                <h2>Dr. Putri</h2>
+                <p class="alumnus">Alumnus: Universitas Diponegoro (UNDIP)</p>
+                <p class="hospital">Praktik: RS Kariadi Semarang</p>
+                <blockquote class="doctor-quote">"Validasi perasaanmu, kamu berhak merasa tenang."</blockquote>
+            </div>
+            <div class="partner-action">
+                <a href="kontak.html?partner=Dr.%20Putri" class="chat-btn">Chat Sekarang</a>
+            </div>
+        </article>
+
+        <!-- 6. Dr. Anggi -->
+        <article class="partner-card">
+            <div class="avatar avatar-6">DA</div>
+            <div class="partner-info">
+                <h2>Dr. Anggi</h2>
+                <p class="alumnus">Alumnus: Universitas Brawijaya (UB)</p>
+                <p class="hospital">Praktik: RS Saiful Anwar Malang</p>
+                <blockquote class="doctor-quote">"Setiap badai pasti berlalu, percayalah pada prosesnya."</blockquote>
+            </div>
+            <div class="partner-action">
+                <a href="kontak.html?partner=Dr.%20Anggi" class="chat-btn">Chat Sekarang</a>
+            </div>
+        </article>
+
+        <!-- 7. Dr. Vina -->
+        <article class="partner-card">
+            <div class="avatar avatar-7">DV</div>
+            <div class="partner-info">
+                <h2>Dr. Vina</h2>
+                <p class="alumnus">Alumnus: Universitas Hasanuddin (UNHAS)</p>
+                <p class="hospital">Praktik: RS Wahidin Sudirohusodo</p>
+                <blockquote class="doctor-quote">"Mendengarkan diri sendiri adalah bentuk cinta terbaik."</blockquote>
+            </div>
+            <div class="partner-action">
+                <a href="kontak.html?partner=Dr.%20Vina" class="chat-btn">Chat Sekarang</a>
+            </div>
+        </article>
+
+        <!-- 8. Dr. Chel -->
+        <article class="partner-card">
+            <div class="avatar avatar-8">DC</div>
+            <div class="partner-info">
+                <h2>Dr. Chel</h2>
+                <p class="alumnus">Alumnus: Universitas Sebelas Maret (UNS)</p>
+                <p class="hospital">Praktik: RS Dr. Moewardi Surakarta</p>
+                <blockquote class="doctor-quote">"Jangan ragu untuk mencari ruang aman untuk bercerita."</blockquote>
+            </div>
+            <div class="partner-action">
+                <a href="kontak.html?partner=Dr.%20Chel" class="chat-btn">Chat Sekarang</a>
+            </div>
+        </article>
+
+        <!-- 9. Dr. Cila -->
+        <article class="partner-card">
+            <div class="avatar avatar-9">DC</div>
+            <div class="partner-info">
+                <h2>Dr. Cila</h2>
+                <p class="alumnus">Alumnus: Universitas Udayana (UNUD)</p>
+                <p class="hospital">Praktik: RS Sanglah Denpasar</p>
+                <blockquote class="doctor-quote">"Perlahan tapi pasti, kamu pasti bisa melewatinya."</blockquote>
+            </div>
+            <div class="partner-action">
+                <a href="kontak.html?partner=Dr.%20Cila" class="chat-btn">Chat Sekarang</a>
+            </div>
+        </article>
+
+        <!-- 10. Dr. Jarot -->
+        <article class="partner-card">
+            <div class="avatar avatar-10">DJ</div>
+            <div class="partner-info">
+                <h2>Dr. Jarot</h2>
+                <p class="alumnus">Alumnus: Universitas Sumatra Utara (USU)</p>
+                <p class="hospital">Praktik: RS Adam Malik Medan</p>
+                <blockquote class="doctor-quote">"Kesehatan mental sama pentingnya dengan fisik."</blockquote>
+            </div>
+            <div class="partner-action">
+                <a href="kontak.html?partner=Dr.%20Jarot" class="chat-btn">Chat Sekarang</a>
+            </div>
+        </article>
+
+        <!-- 11. Dr. Asel -->
+        <article class="partner-card">
+            <div class="avatar avatar-11">DA</div>
+            <div class="partner-info">
+                <h2>Dr. Asel</h2>
+                <p class="alumnus">Alumnus: Universitas Andalas (UNAND)</p>
+                <p class="hospital">Praktik: RS M. Djamil Padang</p>
+                <blockquote class="doctor-quote">"Kamu berharga apa adanya, mari kita bicarakan."</blockquote>
+            </div>
+            <div class="partner-action">
+                <a href="kontak.html?partner=Dr.%20Asel" class="chat-btn">Chat Sekarang</a>
+            </div>
+        </article>
+
+        <!-- 12. Dr. Acut -->
+        <article class="partner-card">
+            <div class="avatar avatar-12">DA</div>
+            <div class="partner-info">
+                <h2>Dr. Acut</h2>
+                <p class="alumnus">Alumnus: Universitas Syiah Kuala (USK)</p>
+                <p class="hospital">Praktik: RS Zainoel Abidin Banda Aceh</p>
+                <blockquote class="doctor-quote">"Menangis bukan berarti lemah, itu tanda kamu kuat bertahan."</blockquote>
+            </div>
+            <div class="partner-action">
+                <a href="kontak.html?partner=Dr.%20Acut" class="chat-btn">Chat Sekarang</a>
+            </div>
+        </article>
+
+        <!-- 13. Dr. Yaya -->
+        <article class="partner-card">
+            <div class="avatar avatar-13">DY</div>
+            <div class="partner-info">
+                <h2>Dr. Yaya</h2>
+                <p class="alumnus">Alumnus: Universitas Islam Indonesia (UII)</p>
+                <p class="hospital">Praktik: RS JIH Yogyakarta</p>
+                <blockquote class="doctor-quote">"Ruang ini aman untuk semua cerita lelahmu."</blockquote>
+            </div>
+            <div class="partner-action">
+                <a href="kontak.html?partner=Dr.%20Yaya" class="chat-btn">Chat Sekarang</a>
+            </div>
+        </article>
+
+        <!-- 14. Dr. Lolo -->
+        <article class="partner-card">
+            <div class="avatar avatar-14">DL</div>
+            <div class="partner-info">
+                <h2>Dr. Lolo</h2>
+                <p class="alumnus">Alumnus: Universitas Katolik Atma Jaya</p>
+                <p class="hospital">Praktik: RS Atma Jaya Jakarta</p>
+                <blockquote class="doctor-quote">"Tarik napas dalam-dalam, kamu sudah melakukan yang terbaik."</blockquote>
+            </div>
+            <div class="partner-action">
+                <a href="kontak.html?partner=Dr.%20Lolo" class="chat-btn">Chat Sekarang</a>
+            </div>
+        </article>
+
+        <!-- 15. Dr. Ehe -->
+        <article class="partner-card">
+            <div class="avatar avatar-15">DE</div>
+            <div class="partner-info">
+                <h2>Dr. Ehe</h2>
+                <p class="alumnus">Alumnus: Universitas Muhammadiyah Yogyakarta</p>
+                <p class="hospital">Praktik: RS PKU Muhammadiyah</p>
+                <blockquote class="doctor-quote">"Selalu ada harapan di balik hari-hari yang berat."</blockquote>
+            </div>
+            <div class="partner-action">
+                <a href="kontak.html?partner=Dr.%20Ehe" class="chat-btn">Chat Sekarang</a>
+            </div>
+        </article>
+
+        <!-- 16. Dr. Emg -->
+        <article class="partner-card">
+            <div class="avatar avatar-16">DE</div>
+            <div class="partner-info">
+                <h2>Dr. Emg</h2>
+                <p class="alumnus">Alumnus: Universitas Trisakti</p>
+                <p class="hospital">Praktik: RS Siloam Kebon Jeruk</p>
+                <blockquote class="doctor-quote">"Mari temukan kembali ketenangan di dalam dirimu."</blockquote>
+            </div>
+            <div class="partner-action">
+                <a href="kontak.html?partner=Dr.%20Emg" class="chat-btn">Chat Sekarang</a>
+            </div>
+        </article>
+
+        <!-- 17. Dr. Loo -->
+        <article class="partner-card">
+            <div class="avatar avatar-17">DL</div>
+            <div class="partner-info">
+                <h2>Dr. Loo</h2>
+                <p class="alumnus">Alumnus: Universitas Tarumanagara (UNTAR)</p>
+                <p class="hospital">Praktik: RS Royal Taruma Jakarta</p>
+                <blockquote class="doctor-quote">"Kamu hebat karena sudah bertahan sampai detik ini."</blockquote>
+            </div>
+            <div class="partner-action">
+                <a href="kontak.html?partner=Dr.%20Loo" class="chat-btn">Chat Sekarang</a>
+            </div>
+        </article>
+
+        <!-- 18. Dr. Jack -->
+        <article class="partner-card">
+            <div class="avatar avatar-18">DJ</div>
+            <div class="partner-info">
+                <h2>Dr. Jack</h2>
+                <p class="alumnus">Alumnus: Universitas Pelita Harapan (UPH)</p>
+                <p class="hospital">Praktik: RS Siloam Lippo Village</p>
+                <blockquote class="doctor-quote">"Pendengaran yang hangat siap menyambut keluh kesahmu."</blockquote>
+            </div>
+            <div class="partner-action">
+                <a href="kontak.html?partner=Dr.%20Jack" class="chat-btn">Chat Sekarang</a>
+            </div>
+        </article>
+
     </section>
-  </main>
+</main>
   <footer class="site-footer"><span>© 2026 TalkToMe</span><span>Tempat bercerita, ruang untuk bertumbuh.</span></footer>
   <!-- Tombol Navigasi Kanan Bawah -->
 <div class="nav-buttons">
