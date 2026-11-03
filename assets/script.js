@@ -1,6 +1,65 @@
-/* TalkToMe — shared behaviour for the static site. */
+/* TalkToMe: shared behaviour for the static site. */
 (() => {
   'use strict';
+
+  /* -----------------------------------------------------------------------
+     Theme toggle (Light / Dark mode)
+     ----------------------------------------------------------------------- */
+
+  const getPreferredTheme = () => {
+    try {
+      const saved = localStorage.getItem('talktome-theme');
+      if (saved === 'light' || saved === 'dark') return saved;
+    } catch {
+      // Storage access may be restricted
+    }
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  };
+
+  const applyTheme = (theme) => {
+    document.documentElement.setAttribute('data-theme', theme);
+    const themeToggles = Array.from(document.querySelectorAll('.theme-toggle'));
+    themeToggles.forEach((toggle) => {
+      toggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+      toggle.setAttribute('aria-label', theme === 'dark' ? 'Ganti ke mode terang' : 'Ganti ke mode gelap');
+      const label = toggle.querySelector('.theme-toggle__text');
+      if (label) {
+        label.textContent = theme === 'dark' ? 'Terang' : 'Gelap';
+      }
+    });
+  };
+
+  applyTheme(getPreferredTheme());
+
+  document.addEventListener('click', (event) => {
+    const toggle = event.target.closest('.theme-toggle');
+    if (!toggle) return;
+    const current = document.documentElement.getAttribute('data-theme') || 'light';
+    const next = current === 'dark' ? 'light' : 'dark';
+    try {
+      localStorage.setItem('talktome-theme', next);
+    } catch {
+      // Storage access may be restricted
+    }
+    applyTheme(next);
+  });
+
+  const colorSchemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  const handleSystemThemeChange = (event) => {
+    try {
+      if (!localStorage.getItem('talktome-theme')) {
+        applyTheme(event.matches ? 'dark' : 'light');
+      }
+    } catch {
+      applyTheme(event.matches ? 'dark' : 'light');
+    }
+  };
+
+  if (typeof colorSchemeQuery.addEventListener === 'function') {
+    colorSchemeQuery.addEventListener('change', handleSystemThemeChange);
+  } else if (typeof colorSchemeQuery.addListener === 'function') {
+    colorSchemeQuery.addListener(handleSystemThemeChange);
+  }
 
   // The live Supabase project currently exposes this table. Change this one
   // constant if the project is migrated to the documented `contact` table.

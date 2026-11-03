@@ -23,11 +23,19 @@
         <span class="brand-name">TalkToMe</span>
       </a>
 
-      <button class="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="primary-navigation">
-        <span class="menu-toggle__bar" aria-hidden="true"></span>
-        <span class="menu-toggle__bar" aria-hidden="true"></span>
-        <span class="menu-toggle__bar" aria-hidden="true"></span>
-      </button>
+      <div class="header-controls">
+        <button class="theme-toggle" type="button" aria-label="Ganti ke mode gelap" aria-pressed="false">
+          <svg class="theme-toggle__icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="theme-toggle__icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <span class="theme-toggle__text">Gelap</span>
+        </button>
+
+        <button class="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="primary-navigation">
+          <span class="menu-toggle__bar" aria-hidden="true"></span>
+          <span class="menu-toggle__bar" aria-hidden="true"></span>
+          <span class="menu-toggle__bar" aria-hidden="true"></span>
+        </button>
+      </div>
 
       <nav class="site-nav" id="primary-navigation" aria-label="Navigasi utama">
         <ul class="nav-list">
@@ -45,16 +53,15 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">Tempat untuk didengar dan dipahami</p>
-          <h1 id="hero-title" lang="en">Find a caring listener and the solutions you need, all in one place</h1>
+          <h1 id="hero-title">Temukan pendengar yang peduli dan solusi yang kamu butuhkan</h1>
           <p class="hero-description">TalkToMe hadir untuk menemani kamu dalam setiap cerita dengan pendengar yang tepat dan solusi yang kamu butuhkan.</p>
           <div class="hero-actions">
-            <a class="btn btn--primary" href="kontak.html">Mulai Sekarang</a>
+            <a class="btn btn--primary" href="kontak.html">Mulai Bercerita</a>
             <a class="btn btn--secondary" href="partner.html">Kenali Partner Kami</a>
           </div>
         </div>
 
         <div class="hero-art" role="img" aria-label="Ilustrasi dua orang sedang berbincang dengan pendamping">
-          <div class="art-window" aria-hidden="true"><span></span><span></span><span></span></div>
           <div class="speech speech-one">Aku siap mendengarkan.</div>
           <div class="person person-left" aria-hidden="true"><div class="hair"></div><div class="head"></div><div class="body"></div></div>
           <div class="person person-right" aria-hidden="true"><div class="hair"></div><div class="head"></div><div class="body"></div></div>
@@ -80,7 +87,7 @@
           </li>
           <li>
             <svg class="icon trust-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            24 Jam
+            Pesan Kapan Saja
           </li>
         </ul>
       </div>
@@ -89,7 +96,7 @@
     <section class="section" aria-labelledby="why-title">
       <div class="container">
         <div class="section-heading section-heading--center">
-          <p class="eyebrow">Mengapa TalkToMe</p>
+          <p class="eyebrow">Prinsip Layanan</p>
           <h2 id="why-title">Mengapa pilih kami?</h2>
           <p>Di TalkToMe, kami percaya bahwa setiap suara memiliki arti. Apa pun yang sedang kamu hadapi, kamu tidak harus menghadapinya sendirian.</p>
         </div>
@@ -97,26 +104,29 @@
         <div class="feature-grid">
           <article class="feature-card">
             <span class="icon-badge" aria-hidden="true">
-              <svg viewBox="0 0 24 24" class="icon"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <svg viewBox="0 0 24 24" class="icon"><rect x="5" y="2" width="14" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 18h.01" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
             </span>
-            <h3>Akses mudah digunakan</h3>
+            <h3>Akses mudah dan fleksibel</h3>
+            <p>Bisa diakses langsung dari peramban ponsel atau komputer tanpa perlu unduh aplikasi.</p>
           </article>
-          <article class="feature-card">
+          <article class="feature-card feature-card--featured">
             <span class="icon-badge" aria-hidden="true">
               <svg viewBox="0 0 24 24" class="icon"><path d="M12 21s7-3.4 7-9V6l-7-3-7 3v6c0 5.6 7 9 7 9Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
-            <h3>Solusi praktis sesuai kebutuhan</h3>
+            <h3>Solusi praktis dan berimbang</h3>
+            <p>Didampingi pendengar yang memahami ceritamu secara netral, suportif, dan penuh empati.</p>
           </article>
           <article class="feature-card">
             <span class="icon-badge" aria-hidden="true">
               <svg viewBox="0 0 24 24" class="icon"><path d="M20.8 8.6a5.5 5.5 0 0 0-9.4-2.3L12 6.7l-.6-.6a5.5 5.5 0 0 0-7.8 7.8L12 22l8.4-8.1a5.5 5.5 0 0 0 .4-5.3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
             </span>
-            <h3>Pengalaman nyaman tanpa tekanan</h3>
+            <h3>Pengalaman aman tanpa tekanan</h3>
+            <p>Bebas bercerita sesuai kenyamananmu dengan perlindungan privasi pesan penuh.</p>
           </article>
         </div>
 
         <div class="section-link">
-          <a class="text-link" href="tentang.html">Tentang TalkToMe <span aria-hidden="true">→</span></a>
+          <a class="text-link" href="tentang.html">Lihat selengkapnya tentang TalkToMe</a>
         </div>
       </div>
     </section>
@@ -127,6 +137,11 @@
           <p class="eyebrow">Kenali para pendamping</p>
           <h2 id="partner-preview-title">Partner Kami</h2>
           <p>Temukan partner yang siap mendengarkan dan mendampingi perjalananmu.</p>
+        </div>
+
+        <div class="prototype-banner">
+          <span class="prototype-tag">Data Simulasi</span>
+          <span>Profil pendamping di bawah ini merupakan data contoh untuk keperluan demonstrasi antarmuka TalkToMe.</span>
         </div>
 
         <div class="partner-grid partner-grid--preview">
@@ -179,7 +194,7 @@
           <h2 id="cta-title">Setiap cerita layak didengar.</h2>
           <p>Mulai langkah kecilmu bersama TalkToMe.</p>
         </div>
-        <a class="btn btn--aqua" href="kontak.html">Mulai Sekarang</a>
+        <a class="btn btn--aqua" href="kontak.html">Hubungi Pendamping</a>
       </div>
     </section>
   </main>
@@ -188,7 +203,7 @@
     <div class="container page-pager__inner page-pager__inner--next">
       <a class="pager-link pager-link--next" href="tentang.html">
         <span class="pager-link__label">Berikutnya</span>
-        <span class="pager-link__title">Tentang TalkToMe <span aria-hidden="true">→</span></span>
+        <span class="pager-link__title">Tentang TalkToMe</span>
       </a>
     </div>
   </nav>

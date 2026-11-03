@@ -23,11 +23,19 @@
         <span class="brand-name">TalkToMe</span>
       </a>
 
-      <button class="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="primary-navigation">
-        <span class="menu-toggle__bar" aria-hidden="true"></span>
-        <span class="menu-toggle__bar" aria-hidden="true"></span>
-        <span class="menu-toggle__bar" aria-hidden="true"></span>
-      </button>
+      <div class="header-controls">
+        <button class="theme-toggle" type="button" aria-label="Ganti ke mode gelap" aria-pressed="false">
+          <svg class="theme-toggle__icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="theme-toggle__icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <span class="theme-toggle__text">Gelap</span>
+        </button>
+
+        <button class="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="primary-navigation">
+          <span class="menu-toggle__bar" aria-hidden="true"></span>
+          <span class="menu-toggle__bar" aria-hidden="true"></span>
+          <span class="menu-toggle__bar" aria-hidden="true"></span>
+        </button>
+      </div>
 
       <nav class="site-nav" id="primary-navigation" aria-label="Navigasi utama">
         <ul class="nav-list">
@@ -53,6 +61,11 @@
 
     <section class="section" aria-label="Daftar partner">
       <div class="container">
+        <div class="prototype-banner">
+          <span class="prototype-tag">Data Simulasi</span>
+          <span>Daftar profil dan riwayat almamater/praktik di bawah ini adalah data ilustratif untuk pengujian fungsional dan desain prototipe TalkToMe.</span>
+        </div>
+
         <div class="partner-grid">
           <article class="partner-card">
             <div class="partner-top">
@@ -279,7 +292,7 @@
           <h2 id="partner-cta-title">Setiap cerita layak didengar.</h2>
           <p>Mulai langkah kecilmu bersama TalkToMe.</p>
         </div>
-        <a class="btn btn--aqua" href="kontak.html">Mulai Sekarang</a>
+        <a class="btn btn--aqua" href="kontak.html">Hubungi Pendamping</a>
       </div>
     </section>
   </main>
@@ -288,11 +301,11 @@
     <div class="container page-pager__inner">
       <a class="pager-link pager-link--prev" href="tentang.html">
         <span class="pager-link__label">Sebelumnya</span>
-        <span class="pager-link__title"><span aria-hidden="true">←</span> Tentang TalkToMe</span>
+        <span class="pager-link__title">Tentang TalkToMe</span>
       </a>
       <a class="pager-link pager-link--next" href="kontak.html">
         <span class="pager-link__label">Berikutnya</span>
-        <span class="pager-link__title">Kontak <span aria-hidden="true">→</span></span>
+        <span class="pager-link__title">Kontak</span>
       </a>
     </div>
   </nav>
